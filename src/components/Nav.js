@@ -10,7 +10,6 @@ const Nav = () => {
   return (
     <NavStyled>
       <img src={Logo} alt="logo" />
-
       <div className="icons">
         <img src={Home} alt="home" />
         <img src={Save} alt="save" />
