@@ -1,6 +1,4 @@
-//Framer Motion
 import { motion } from "framer-motion";
-//Style
 import styled from "styled-components";
 
 const Tool = () => {
