@@ -1,6 +1,6 @@
 # react-recipe
 
-This is a Web Recipe Application which uses [Spoonacular API](https://spoonacular.com/food-api/docs#Get-Similar-Recipes) to fetch Recipe data and render on the web page using React.
+This is a Web Recipe Application which uses [Spoonacular API](https://spoonacular.com/food-api) to fetch Recipe data and render on the web page using React.
 
 ## Available Scripts
 
@@ -8,11 +8,11 @@ In the project directory, you can run:
 
 ### `git clone https://github.com/harshpandey002/react-recipe.git`
 
-This clones the updated projects to your local machine where you can make changes to the projects.
+This Clones the updated Source Code of the project to your local machine where you can make changes.
 
 ### `npm install`
 
-This installs the dependencies of the project to run the application in development mode on your machine.
+This Installs all the dependencies of the project to run the application in development mode on your machine.
 
 ### `npm start`
 
