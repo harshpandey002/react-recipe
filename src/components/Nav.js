@@ -1,18 +1,17 @@
-//Framer Motion
 import { motion } from "framer-motion";
-//Style
 import styled from "styled-components";
 
 const Nav = () => {
-  return (
-    <NavStyled>
-      <h1>Nav Component</h1>
-    </NavStyled>
-  );
+  return <NavStyled></NavStyled>;
 };
 
 const NavStyled = styled(motion.div)`
-  color: #f54545;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0b0b0b;
+  flex: 1.5;
+  padding: 1.3rem 0rem;
 `;
 
 export default Nav;

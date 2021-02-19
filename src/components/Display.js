@@ -4,15 +4,11 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const Display = () => {
-  return (
-    <DisplayStyled>
-      <h1>Display Component</h1>
-    </DisplayStyled>
-  );
+  return <DisplayStyled></DisplayStyled>;
 };
 
 const DisplayStyled = styled(motion.div)`
-  color: #7445f5;
+  flex: 20;
 `;
 
 export default Display;

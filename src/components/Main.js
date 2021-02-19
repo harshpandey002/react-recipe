@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 const Main = () => {
   return (
     <MainStyled>
-      <h1>Main Component</h1>
       <Nav />
       <Display />
       <Tool />
@@ -18,7 +17,14 @@ const Main = () => {
 };
 
 const MainStyled = styled(motion.div)`
-  color: #45f545;
+  display: flex;
+  background-color: #121212;
+  width: 95vw;
+  height: 90vh;
+  margin: 2.3rem auto;
+  border-radius: 35px;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
 `;
 
 export default Main;
