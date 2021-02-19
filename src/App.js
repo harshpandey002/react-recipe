@@ -1,7 +1,13 @@
+//Components
+import Nav from "./components/Nav";
+import GlobalStyle from "./components/GlobalStyle";
+import Main from "./components/Main";
+
 function App() {
   return (
     <div className="App">
-      <h1>React Recipe</h1>
+      <GlobalStyle />
+      <Main />
     </div>
   );
 }
