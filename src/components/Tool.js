@@ -4,13 +4,25 @@ import Filter from "./Filter";
 import Similar from "./Similar";
 import Search from "../img/Search.svg";
 
-const Tool = () => {
+const Tool = ({ textInput, setTextInput, setSearch }) => {
+  const inputHandler = (e) => {
+    setTextInput(e.target.value);
+  };
+
+  const submitSearch = (e) => {
+    e.preventDefault();
+    setSearch(textInput);
+    setTextInput("");
+  };
+
   return (
     <ToolStyled>
-      <div className="search">
-        <input type="text" />
-        <img src={Search} alt="search" />
-      </div>
+      <form className="search">
+        <input value={textInput} onChange={inputHandler} type="text" />
+        <button onClick={submitSearch}>
+          <img type="submit" src={Search} alt="search" />
+        </button>
+      </form>
       {<Filter /> || <Similar />}
     </ToolStyled>
   );
@@ -24,6 +36,11 @@ const ToolStyled = styled(motion.div)`
     border-radius: 35px;
     width: 85%;
     overflow: hidden;
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
     input {
       width: 100%;
       background-color: #121212;

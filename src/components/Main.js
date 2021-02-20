@@ -1,3 +1,4 @@
+import { useState } from "react";
 //Components
 import styled from "styled-components";
 import Display from "./Display";
@@ -7,11 +8,25 @@ import Tool from "./Tool";
 import { motion } from "framer-motion";
 
 const Main = () => {
+  const [textInput, setTextInput] = useState("");
+  const [recipe, setRecipe] = useState([]);
+  const [search, setSearch] = useState(" ");
   return (
     <MainStyled>
       <Nav />
-      <Display />
-      <Tool />
+      <Display
+        recipe={recipe}
+        setRecipe={setRecipe}
+        textInput={textInput}
+        search={search}
+      />
+      <Tool
+        recipe={recipe}
+        setRecipe={setRecipe}
+        textInput={textInput}
+        setTextInput={setTextInput}
+        setSearch={setSearch}
+      />
     </MainStyled>
   );
 };
