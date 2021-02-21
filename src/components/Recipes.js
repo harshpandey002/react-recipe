@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const Recipes = ({ title, img }) => {
+const Recipes = ({ title, img, id, setId }) => {
+  const clickHandler = () => {
+    setId(id);
+  };
   return (
     <RecipesStyled>
-      <div className="card">
+      <div className="card" onClick={clickHandler}>
         <img src={img} alt="food" />
         <div className="title">
           <h4>{title}</h4>
@@ -22,6 +25,7 @@ const RecipesStyled = styled(motion.div)`
   overflow: hidden;
   margin-right: 2rem;
   margin-bottom: 2rem;
+  cursor: pointer;
   .card {
     img {
       width: 100%;

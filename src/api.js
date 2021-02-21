@@ -1,8 +1,10 @@
-export const getRecipe = (t) => {
+export const getRecipe = (t, id) => {
   if (t == "Random") {
-    return "https://api.spoonacular.com/recipes/random?apiKey=d910a1023ead47d6b546d370be09f56f&number=9";
+    return "https://api.spoonacular.com/recipes/random?apiKey=653e95e54988458dbd766f7efad3fa79&number=9";
+  } else if (t == "Details") {
+    return `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=653e95e54988458dbd766f7efad3fa79`;
   } else {
-    return `https://api.spoonacular.com/recipes/complexSearch?apiKey=d910a1023ead47d6b546d370be09f56f&number=36&query=${t}`;
+    return `https://api.spoonacular.com/recipes/complexSearch?apiKey=653e95e54988458dbd766f7efad3fa79&number=36&query=${t}`;
   }
 };
 

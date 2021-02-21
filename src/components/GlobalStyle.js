@@ -23,10 +23,16 @@ body{
   }
 
   &::-webkit-scrollbar-track {
-    background-color: #121212;
+    background-color: rgba(18, 18, 18,0);
   }
 
+h1{
+  font-size: 3rem;
+}
 
+h2{
+  font-size: 2.3rem;
+}
 
 
 `;

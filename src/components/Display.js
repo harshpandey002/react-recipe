@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { getRecipe } from "../api";
 import Recipes from "./Recipes";
+import Recipe from "./Recipe";
 
 const Display = ({ recipe, setRecipe, search }) => {
   useEffect(() => {
@@ -24,16 +25,26 @@ const Display = ({ recipe, setRecipe, search }) => {
     }
   }, [search]);
 
+  const [id, setId] = useState(null);
+
   return (
     <DisplayStyled>
+      {/* <Recipe id={id} recipe={recipe[7]} /> */}
       {recipe.map((data) => (
-        <Recipes title={data.title} img={data.image} key={data.id} />
+        <Recipes
+          title={data.title}
+          img={data.image}
+          setId={setId}
+          key={data.id}
+          id={data.id}
+        />
       ))}
     </DisplayStyled>
   );
 };
 
 const DisplayStyled = styled(motion.div)`
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex: 20;
