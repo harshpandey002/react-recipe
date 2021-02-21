@@ -21,6 +21,7 @@ const RecipesStyled = styled(motion.div)`
   border-radius: 25px;
   overflow: hidden;
   margin-right: 2rem;
+  margin-bottom: 2rem;
   .card {
     img {
       width: 100%;

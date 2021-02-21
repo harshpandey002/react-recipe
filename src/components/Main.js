@@ -10,16 +10,11 @@ import { motion } from "framer-motion";
 const Main = () => {
   const [textInput, setTextInput] = useState("");
   const [recipe, setRecipe] = useState([]);
-  const [search, setSearch] = useState(" ");
+  const [search, setSearch] = useState("");
   return (
     <MainStyled>
       <Nav />
-      <Display
-        recipe={recipe}
-        setRecipe={setRecipe}
-        textInput={textInput}
-        search={search}
-      />
+      <Display recipe={recipe} setRecipe={setRecipe} search={search} />
       <Tool
         recipe={recipe}
         setRecipe={setRecipe}

@@ -5,9 +5,9 @@ import styled from "styled-components";
 import { getRecipe } from "../api";
 import Recipes from "./Recipes";
 
-const Display = ({ recipe, setRecipe, textInput, search }) => {
+const Display = ({ recipe, setRecipe, search }) => {
   useEffect(() => {
-    if (search == " ") {
+    if (search == "") {
       axios
         .get(getRecipe("Random"))
         .then((data) => {
@@ -37,7 +37,7 @@ const DisplayStyled = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   flex: 20;
-  padding: 3.2rem 0 0.8rem 2.5rem;
+  padding: 3.2rem 0 0.8rem 3.5rem;
   overflow-y: scroll;
 `;
 
