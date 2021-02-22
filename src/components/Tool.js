@@ -4,7 +4,7 @@ import Filter from "./Filter";
 import Similar from "./Similar";
 import Search from "../img/Search.svg";
 
-const Tool = ({ textInput, setTextInput, setSearch }) => {
+const Tool = ({ textInput, setTextInput, setSearch, setId }) => {
   const inputHandler = (e) => {
     setTextInput(e.target.value);
   };
@@ -13,6 +13,7 @@ const Tool = ({ textInput, setTextInput, setSearch }) => {
     e.preventDefault();
     setSearch(textInput);
     setTextInput("");
+    setId("");
   };
 
   return (

@@ -6,7 +6,7 @@ import { getRecipe } from "../api";
 import Recipes from "./Recipes";
 import Recipe from "./Recipe";
 
-const Display = ({ recipe, setRecipe, search }) => {
+const Display = ({ recipe, setRecipe, search, id, setId }) => {
   useEffect(() => {
     if (search == "") {
       axios
@@ -25,11 +25,11 @@ const Display = ({ recipe, setRecipe, search }) => {
     }
   }, [search]);
 
-  const [id, setId] = useState(null);
+  const [rname, setRname] = useState();
 
   return (
     <DisplayStyled>
-      {/* <Recipe id={id} recipe={recipe[7]} /> */}
+      {id && <Recipe id={id} rname={rname} />}
       {recipe.map((data) => (
         <Recipes
           title={data.title}
@@ -37,6 +37,7 @@ const Display = ({ recipe, setRecipe, search }) => {
           setId={setId}
           key={data.id}
           id={data.id}
+          setRname={setRname}
         />
       ))}
     </DisplayStyled>
@@ -44,7 +45,7 @@ const Display = ({ recipe, setRecipe, search }) => {
 };
 
 const DisplayStyled = styled(motion.div)`
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-wrap: wrap;
   flex: 20;

@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const Recipes = ({ title, img, id, setId }) => {
+const Recipes = ({ title, img, id, setId, setRname }) => {
   const clickHandler = () => {
     setId(id);
+    setRname(title);
   };
   return (
     <RecipesStyled>

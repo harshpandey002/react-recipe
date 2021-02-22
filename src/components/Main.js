@@ -11,16 +11,24 @@ const Main = () => {
   const [textInput, setTextInput] = useState("");
   const [recipe, setRecipe] = useState([]);
   const [search, setSearch] = useState("");
+  const [id, setId] = useState();
   return (
     <MainStyled>
       <Nav />
-      <Display recipe={recipe} setRecipe={setRecipe} search={search} />
+      <Display
+        recipe={recipe}
+        setRecipe={setRecipe}
+        search={search}
+        id={id}
+        setId={setId}
+      />
       <Tool
         recipe={recipe}
         setRecipe={setRecipe}
         textInput={textInput}
         setTextInput={setTextInput}
         setSearch={setSearch}
+        setId={setId}
       />
     </MainStyled>
   );

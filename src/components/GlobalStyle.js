@@ -4,13 +4,12 @@ const GlobalStyle = createGlobalStyle`
 
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body{
     background-color: #222222;
-    color: rgba(255, 255, 255, 0.87);
+    color: rgb(146, 146, 146);
 }
 
 &::-webkit-scrollbar {
@@ -18,7 +17,7 @@ body{
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgb(34, 34, 34);
+    background-color: rgba(22, 22, 22, 0.788);
     border-radius: 3px;
   }
 
