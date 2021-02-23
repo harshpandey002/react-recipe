@@ -17,7 +17,7 @@ const Recipe = ({ id, rname }) => {
       .catch((err) => console.log("recipe error"));
 
     axios
-      .get(getRecipe("Ingridients", id))
+      .get(getRecipe("Ingredients", id))
       .then((data) => {
         setIngridient(data.data.ingredients);
         console.log(data.data.ingredients);
@@ -59,7 +59,7 @@ const RecipeStyled = styled(motion.div)`
   width: 59vw;
   text-align: center;
   border-radius: 25px;
-  margin-bottom: 1.9rem;
+  margin-top: 1.9rem;
   h1 {
     text-transform: capitalize;
   }

@@ -45,11 +45,13 @@ const Display = ({ recipe, setRecipe, search, id, setId }) => {
 };
 
 const DisplayStyled = styled(motion.div)`
-  /* position: relative; */
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 1.6rem;
+  padding-bottom: 2.7rem;
   flex: 20;
-  padding: 3.2rem 0 0.8rem 3.5rem;
   overflow-y: scroll;
 `;
 

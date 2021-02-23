@@ -21,16 +21,15 @@ const Recipes = ({ title, img, id, setId, setRname }) => {
 const RecipesStyled = styled(motion.div)`
   background-color: rgb(11, 11, 11);
   width: 30%;
-  height: 23vh;
+  height: 25vh;
   border-radius: 25px;
   overflow: hidden;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1.5rem;
   cursor: pointer;
   .card {
     img {
       width: 100%;
-      height: 20vh;
+      height: 22vh;
       object-fit: cover;
     }
   }
