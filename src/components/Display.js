@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { getRecipe } from "../api";
 import Recipes from "./Recipes";
 import Recipe from "./Recipe";
+import ScrollTop from "./ScrollTop";
 
 const Display = ({ recipe, setRecipe, search, id, setId }) => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const Display = ({ recipe, setRecipe, search, id, setId }) => {
 
   return (
     <DisplayStyled>
+      <ScrollTop id={id} />
       {id && <Recipe id={id} rname={rname} />}
       {recipe.map((data) => (
         <Recipes

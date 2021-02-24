@@ -23,6 +23,7 @@ const Recipe = ({ id, rname }) => {
         console.log(data.data.ingredients);
       })
       .catch((err) => console.log("ingridient error"));
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [id]);
   return (
     <RecipeStyled>
