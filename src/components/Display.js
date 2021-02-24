@@ -7,7 +7,7 @@ import Recipes from "./Recipes";
 import Recipe from "./Recipe";
 import ScrollTop from "./ScrollTop";
 
-const Display = ({ recipe, setRecipe, search, id, setId }) => {
+const Display = ({ recipe, setRecipe, search, id, setId, rname, setRname }) => {
   useEffect(() => {
     if (search == "") {
       axios
@@ -25,8 +25,6 @@ const Display = ({ recipe, setRecipe, search, id, setId }) => {
         .catch((err) => console.log(err));
     }
   }, [search]);
-
-  const [rname, setRname] = useState();
 
   return (
     <DisplayStyled>

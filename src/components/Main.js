@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 
 const Main = () => {
   const [textInput, setTextInput] = useState("");
+  const [rname, setRname] = useState();
   const [recipe, setRecipe] = useState([]);
   const [search, setSearch] = useState("");
   const [id, setId] = useState();
@@ -21,6 +22,8 @@ const Main = () => {
         search={search}
         id={id}
         setId={setId}
+        rname={rname}
+        setRname={setRname}
       />
       <Tool
         recipe={recipe}
@@ -28,7 +31,10 @@ const Main = () => {
         textInput={textInput}
         setTextInput={setTextInput}
         setSearch={setSearch}
+        id={id}
         setId={setId}
+        rname={rname}
+        setRname={setRname}
       />
     </MainStyled>
   );

@@ -1,10 +1,17 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import Filter from "./Filter";
 import Similar from "./Similar";
 import Search from "../img/Search.svg";
 
-const Tool = ({ textInput, setTextInput, setSearch, setId }) => {
+const Tool = ({
+  textInput,
+  setTextInput,
+  setSearch,
+  id,
+  setId,
+  rname,
+  setRname,
+}) => {
   const inputHandler = (e) => {
     setTextInput(e.target.value);
   };
@@ -24,7 +31,7 @@ const Tool = ({ textInput, setTextInput, setSearch, setId }) => {
           <img type="submit" src={Search} alt="search" />
         </button>
       </form>
-      {<Filter /> || <Similar />}
+      <Similar id={id} rname={rname} setRname={setRname} />
     </ToolStyled>
   );
 };

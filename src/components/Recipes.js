@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const Recipes = ({ title, img, id, setId, setRname }) => {
+const Recipes = ({ title, id, setId, setRname }) => {
   const clickHandler = () => {
     setId(id);
     setRname(title);
@@ -9,7 +9,10 @@ const Recipes = ({ title, img, id, setId, setRname }) => {
   return (
     <RecipesStyled>
       <div className="card" onClick={clickHandler}>
-        <img src={img} alt="food" />
+        <img
+          src={`https://spoonacular.com/recipeImages/${id}-312x231.jpg`}
+          alt="food"
+        />
         <div className="title">
           <h4>{title}</h4>
         </div>
