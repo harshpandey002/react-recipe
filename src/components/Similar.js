@@ -2,18 +2,17 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { getRecipe } from "../api";
+import { similarRecipe } from "../api";
 import SimilarRecipes from "./SimilarRecipes";
 
 const Similar = ({ id, setId, setRname, similar, setSimilar }) => {
   useEffect(() => {
     axios
-      .get(getRecipe("Similar", id))
+      .get(similarRecipe(id))
       .then((data) => {
         setSimilar(data.data);
-        console.log(similar);
       })
-      .catch((err) => console.log("Similar Error"));
+      .catch((err) => console.log("Similar API Error"));
   }, [id]);
   return (
     <SimilarStyled>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { getRecipe } from "../api";
+import { randomRecipe, searchRecipe } from "../api";
 import Recipes from "./Recipes";
 import Recipe from "./Recipe";
 import ScrollTop from "./ScrollTop";
@@ -11,14 +11,14 @@ const Display = ({ recipe, setRecipe, search, id, setId, rname, setRname }) => {
   useEffect(() => {
     if (search == "") {
       axios
-        .get(getRecipe("Random"))
+        .get(randomRecipe())
         .then((data) => {
           setRecipe(data.data.recipes);
         })
         .catch((err) => console.log(err));
     } else {
       axios
-        .get(getRecipe(`${search}`))
+        .get(searchRecipe(`${search}`))
         .then((data) => {
           setRecipe(data.data.results);
         })

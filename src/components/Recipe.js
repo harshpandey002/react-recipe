@@ -2,27 +2,25 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import axios from "axios";
-import { getRecipe } from "../api";
+import { recipeDetail, recipeIngredient } from "../api";
 
 const Recipe = ({ id, rname }) => {
   const [food, setFood] = useState([]);
   const [ingridient, setIngridient] = useState([]);
   useEffect(() => {
     axios
-      .get(getRecipe("Details", id))
+      .get(recipeDetail(id))
       .then((data) => {
         setFood(data.data[0].steps);
-        console.log(food);
       })
-      .catch((err) => console.log("recipe error"));
+      .catch((err) => console.log("Recipe API error"));
 
     axios
-      .get(getRecipe("Ingredients", id))
+      .get(recipeIngredient(id))
       .then((data) => {
         setIngridient(data.data.ingredients);
-        console.log(data.data.ingredients);
       })
-      .catch((err) => console.log("ingridient error"));
+      .catch((err) => console.log("Ingridient API error"));
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [id]);
   return (

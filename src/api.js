@@ -1,16 +1,24 @@
-export const getRecipe = (t, id) => {
-  if (t == "Random") {
-    return "https://api.spoonacular.com/recipes/random?apiKey=727b59b0ee7d401182d605d64f00b24f&number=9";
-  } else if (t == "Details") {
-    return `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=653e95e54988458dbd766f7efad3fa79`;
-  } else if (t == "Ingredients") {
-    return `https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=2bffb5a36e604d8cb57ba61c2cee53b9`;
-  } else if (t == "Similar") {
-    return `https://api.spoonacular.com/recipes/${id}/similar?apiKey=d910a1023ead47d6b546d370be09f56f&number=9`;
-  } else {
-    return `https://api.spoonacular.com/recipes/complexSearch?apiKey=be586995b8de4a398e6b45113c788ce9&number=36&query=${t}`;
-  }
+export const randomRecipe = () => {
+  return "https://api.spoonacular.com/recipes/random?apiKey=727b59b0ee7d401182d605d64f00b24f&number=9";
 };
+
+export const recipeDetail = (id) => {
+  return `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=653e95e54988458dbd766f7efad3fa79`;
+};
+
+export const recipeIngredient = (id) => {
+  return `https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=2bffb5a36e604d8cb57ba61c2cee53b9`;
+};
+
+export const similarRecipe = (id) => {
+  return `https://api.spoonacular.com/recipes/${id}/similar?apiKey=d910a1023ead47d6b546d370be09f56f&number=9`;
+};
+
+export const searchRecipe = (t) => {
+  return `https://api.spoonacular.com/recipes/complexSearch?apiKey=be586995b8de4a398e6b45113c788ce9&number=36&query=${t}`;
+};
+
+//API KEYS
 
 // 727b59b0ee7d401182d605d64f00b24f
 // 653e95e54988458dbd766f7efad3fa79

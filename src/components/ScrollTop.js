@@ -7,7 +7,6 @@ const ScrollTop = ({ id }) => {
       left: 0,
       behavior: "smooth",
     });
-    console.log("ScrollTop is Working");
   }, [id]);
   return null;
 };
