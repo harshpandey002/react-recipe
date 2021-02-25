@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { fadeIn } from "./animation";
 
 const Recipes = ({ title, id, setId, setRname }) => {
   const clickHandler = () => {
@@ -7,7 +8,7 @@ const Recipes = ({ title, id, setId, setRname }) => {
     setRname(title);
   };
   return (
-    <RecipesStyled>
+    <RecipesStyled variants={fadeIn} initial="hidden" animate="show">
       <div className="card" onClick={clickHandler}>
         <img
           src={`https://spoonacular.com/recipeImages/${id}-312x231.jpg`}
