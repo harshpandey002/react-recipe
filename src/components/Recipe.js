@@ -70,7 +70,7 @@ const RecipeStyled = styled(motion.div)`
   .recipe {
     display: flex;
     h2 {
-      border-bottom: 2px solid #a3a3a3;
+      border-bottom: 2px solid rgba(163, 163, 163, 0.2);
       margin-bottom: 1rem;
     }
     .description {
@@ -87,7 +87,7 @@ const RecipeStyled = styled(motion.div)`
       }
     }
     .ingredient {
-      border-left: 2px solid #a3a3a3;
+      border-left: 2px solid rgba(163, 163, 163, 0.2);
       flex: 2;
       padding-right: 1rem;
       p {

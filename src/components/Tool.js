@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import Similar from "./Similar";
@@ -15,12 +16,14 @@ const Tool = ({
   const inputHandler = (e) => {
     setTextInput(e.target.value);
   };
+  const [similar, setSimilar] = useState([]);
 
   const submitSearch = (e) => {
     e.preventDefault();
     setSearch(textInput);
     setTextInput("");
     setId("");
+    setSimilar([]);
   };
 
   return (
@@ -31,7 +34,14 @@ const Tool = ({
           <img type="submit" src={Search} alt="search" />
         </button>
       </form>
-      <Similar id={id} rname={rname} setRname={setRname} />
+      <Similar
+        id={id}
+        setId={setId}
+        rname={rname}
+        setRname={setRname}
+        similar={similar}
+        setSimilar={setSimilar}
+      />
     </ToolStyled>
   );
 };

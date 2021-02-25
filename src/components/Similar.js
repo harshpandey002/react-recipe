@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { getRecipe } from "../api";
-import Recipes from "./Recipes";
+import SimilarRecipes from "./SimilarRecipes";
 
-const Similar = ({ id, setId, setRname }) => {
-  const [similar, setSimilar] = useState([]);
+const Similar = ({ id, setId, setRname, similar, setSimilar }) => {
   useEffect(() => {
     axios
       .get(getRecipe("Similar", id))
@@ -14,12 +13,12 @@ const Similar = ({ id, setId, setRname }) => {
         setSimilar(data.data);
         console.log(similar);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log("Similar Error"));
   }, [id]);
   return (
     <SimilarStyled>
       {similar.map((data) => (
-        <Recipes
+        <SimilarRecipes
           title={data.title}
           img={data.image}
           setId={setId}
@@ -35,7 +34,8 @@ const Similar = ({ id, setId, setRname }) => {
 const SimilarStyled = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   background-color: #121212;
   border-radius: 35px;
   width: 85%;
