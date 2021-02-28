@@ -22,7 +22,7 @@ export const stretch = {
     opacity: 1,
     transition: {
       type: "tween",
-      duration: 5,
+      duration: 2,
     },
     exit: {
       opacity: 0,

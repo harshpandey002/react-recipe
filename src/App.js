@@ -9,11 +9,25 @@ function App() {
   return (
     <AppStyled>
       <GlobalStyle />
+      <h3>
+        This Web Page is not support on Small Devices for now. Please switch to
+        a laptop to view this Application.
+      </h3>
       <Main />
     </AppStyled>
   );
 }
 
-const AppStyled = styled(motion.div)``;
+const AppStyled = styled(motion.div)`
+  h3 {
+    color: black;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+`;
 
 export default App;

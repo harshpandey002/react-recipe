@@ -49,6 +49,9 @@ const MainStyled = styled(motion.div)`
   border-radius: 35px;
   overflow: hidden;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  @media only screen and (max-width: 1079px) {
+    display: none;
+  }
 `;
 
 export default Main;
