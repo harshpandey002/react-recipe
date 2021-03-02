@@ -90,8 +90,9 @@ const ToolStyled = styled(motion.div)`
   height: 80vh;
   margin-right: 2.5rem;
 
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.158);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 `;
 
 export default Tool;

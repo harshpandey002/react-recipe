@@ -28,7 +28,6 @@ const Display = ({ recipe, setRecipe, search, id, setId, rname, setRname }) => {
 
   return (
     <DisplayStyled>
-      <ScrollTop id={id} />
       {id && <Recipe id={id} rname={rname} />}
       {recipe.map((data) => (
         <Recipes

@@ -1,21 +1,21 @@
 export const randomRecipe = () => {
-  return "https://api.spoonacular.com/recipes/random?apiKey=74f1d01827e74269b86eada3d61deb34&number=9";
+  return "https://api.spoonacular.com/recipes/random?apiKey=be586995b8de4a398e6b45113c788ce9&number=9";
 };
 
 export const recipeDetail = (id) => {
-  return `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=74f1d01827e74269b86eada3d61deb34`;
+  return `https://api.spoonacular.com/recipes/${id}/analyzedInstructions?apiKey=be586995b8de4a398e6b45113c788ce9`;
 };
 
 export const recipeIngredient = (id) => {
-  return `https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=74f1d01827e74269b86eada3d61deb34`;
+  return `https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=be586995b8de4a398e6b45113c788ce9`;
 };
 
 export const similarRecipe = (id) => {
-  return `https://api.spoonacular.com/recipes/${id}/similar?apiKey=74f1d01827e74269b86eada3d61deb34&number=9`;
+  return `https://api.spoonacular.com/recipes/${id}/similar?apiKey=be586995b8de4a398e6b45113c788ce9&number=9`;
 };
 
 export const searchRecipe = (t) => {
-  return `https://api.spoonacular.com/recipes/complexSearch?apiKey=74f1d01827e74269b86eada3d61deb34&number=36&query=${t}`;
+  return `https://api.spoonacular.com/recipes/complexSearch?apiKey=be586995b8de4a398e6b45113c788ce9&number=36&query=${t}`;
 };
 
 //API KEYS

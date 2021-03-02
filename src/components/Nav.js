@@ -21,6 +21,7 @@ const NavStyled = styled(motion.div)`
   flex: 1.5;
   padding: 1.3rem 0rem;
 
+  background-color: rgba(0, 0, 0, 0.158);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   img {

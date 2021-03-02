@@ -60,9 +60,12 @@ const RecipeStyled = styled(motion.div)`
   /* position: absolute; */
   width: 59vw;
   text-align: center;
-  background-color: rgb(4, 4, 15, 0.8);
   border-radius: 25px;
   margin-top: 1rem;
+
+  background-color: rgba(0, 0, 0, 0.158);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   h1 {
     text-transform: capitalize;
   }

@@ -6,6 +6,7 @@ import Nav from "./Nav";
 import Tool from "./Tool";
 //Framer Motion
 import { motion } from "framer-motion";
+import ScrollTop from "./ScrollTop";
 
 const Main = () => {
   const [textInput, setTextInput] = useState("");
@@ -15,6 +16,7 @@ const Main = () => {
   const [id, setId] = useState();
   return (
     <MainStyled>
+      <ScrollTop id={id} />
       <Nav />
       <Display
         recipe={recipe}
@@ -44,7 +46,10 @@ const MainStyled = styled(motion.div)`
   display: flex;
   width: 95vw;
   height: 90vh;
-  margin: 2.3rem auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   overflow: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
   @media only screen and (max-width: 1079px) {
