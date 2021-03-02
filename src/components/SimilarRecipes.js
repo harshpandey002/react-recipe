@@ -19,7 +19,7 @@ const SimilarRecipes = ({ title, id, setId, setRname }) => {
 };
 
 const SimilarRecipesStyled = styled(motion.div)`
-  background-color: rgb(11, 11, 11);
+  background-color: rgba(11, 11, 11, 0);
   width: 75%;
   height: 15vh;
   border-radius: 25px;

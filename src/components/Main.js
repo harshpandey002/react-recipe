@@ -42,16 +42,18 @@ const Main = () => {
 
 const MainStyled = styled(motion.div)`
   display: flex;
-  background-color: #121212;
   width: 95vw;
   height: 90vh;
   margin: 2.3rem auto;
-  border-radius: 35px;
   overflow: hidden;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
   @media only screen and (max-width: 1079px) {
     display: none;
   }
+  background-color: rgba(0, 0, 0, 0.158);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 35px;
 `;
 
 export default Main;

@@ -23,7 +23,6 @@ const Recipes = ({ title, id, setId, setRname }) => {
 };
 
 const RecipesStyled = styled(motion.div)`
-  background-color: rgb(11, 11, 11);
   width: 30%;
   height: 25vh;
   border-radius: 25px;

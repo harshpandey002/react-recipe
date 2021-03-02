@@ -58,19 +58,21 @@ const Recipe = ({ id, rname }) => {
 
 const RecipeStyled = styled(motion.div)`
   /* position: absolute; */
-  background-color: #0b0b0b;
   width: 59vw;
   text-align: center;
+  background-color: rgb(4, 4, 15, 0.8);
   border-radius: 25px;
-  margin-top: 1.9rem;
+  margin-top: 1rem;
   h1 {
     text-transform: capitalize;
   }
   .header {
+    margin-top: 0.6rem;
     margin-bottom: 2rem;
   }
   .recipe {
     display: flex;
+
     h2 {
       border-bottom: 2px solid rgba(163, 163, 163, 0.2);
       margin-bottom: 1rem;
@@ -83,7 +85,7 @@ const RecipeStyled = styled(motion.div)`
         padding-left: 1.5rem;
       }
       li {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         margin-right: 1rem;
         margin-bottom: 1rem;
       }
@@ -93,7 +95,7 @@ const RecipeStyled = styled(motion.div)`
       flex: 2;
       padding-right: 1rem;
       p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-bottom: 0.4rem;
       }
     }

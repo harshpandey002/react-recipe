@@ -35,7 +35,6 @@ const SimilarStyled = styled(motion.div)`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: #121212;
   border-radius: 35px;
   width: 85%;
   height: 75%;

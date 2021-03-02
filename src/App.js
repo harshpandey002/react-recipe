@@ -27,6 +27,10 @@ const AppStyled = styled(motion.div)`
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+    opacity: 0;
+    @media only screen and (max-width: 1079px) {
+      opacity: 1;
+    }
   }
 `;
 
