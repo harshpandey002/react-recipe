@@ -15,7 +15,7 @@ const Recipes = ({ title, id, setId, setRname }) => {
           alt="food"
         />
         <div className="title">
-          <h4>{title}</h4>
+          <h4>{title.slice(0, 30)}</h4>
         </div>
       </div>
     </RecipesStyled>

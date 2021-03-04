@@ -7,6 +7,7 @@ import Tool from "./Tool";
 //Framer Motion
 import { motion } from "framer-motion";
 import ScrollTop from "./ScrollTop";
+import { popup } from "./animation";
 
 const Main = () => {
   const [textInput, setTextInput] = useState("");
@@ -16,7 +17,7 @@ const Main = () => {
   const [similar, setSimilar] = useState([]);
   const [id, setId] = useState();
   return (
-    <MainStyled>
+    <MainStyled variants={popup} initial="hidden" animate="show">
       <ScrollTop id={id} />
       <Nav
         setSearch={setSearch}
