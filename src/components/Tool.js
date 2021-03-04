@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import Similar from "./Similar";
@@ -12,11 +11,12 @@ const Tool = ({
   setId,
   rname,
   setRname,
+  similar,
+  setSimilar,
 }) => {
   const inputHandler = (e) => {
     setTextInput(e.target.value);
   };
-  const [similar, setSimilar] = useState([]);
 
   const submitSearch = (e) => {
     e.preventDefault();

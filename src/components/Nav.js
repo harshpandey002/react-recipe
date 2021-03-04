@@ -1,15 +1,23 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { randomRecipe } from "../api";
 import Logo from "../img/Logo.svg";
-import Home from "../img/Home.svg";
-import Save from "../img/Save.svg";
-import Setting from "../img/Setting.svg";
-import Dark from "../img/Dark.svg";
+import axios from "axios";
 
-const Nav = () => {
+const Nav = ({ setId, setSimilar, setRecipe }) => {
+  const clickHandler = () => {
+    axios
+      .get(randomRecipe())
+      .then((data) => {
+        setRecipe(data.data.recipes);
+      })
+      .catch((err) => console.log(err));
+    setId("");
+    setSimilar([]);
+  };
   return (
     <NavStyled>
-      <img src={Logo} alt="logo" />
+      <img onClick={clickHandler} src={Logo} alt="logo" />
     </NavStyled>
   );
 };

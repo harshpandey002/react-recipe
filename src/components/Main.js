@@ -13,11 +13,17 @@ const Main = () => {
   const [rname, setRname] = useState();
   const [recipe, setRecipe] = useState([]);
   const [search, setSearch] = useState("");
+  const [similar, setSimilar] = useState([]);
   const [id, setId] = useState();
   return (
     <MainStyled>
       <ScrollTop id={id} />
-      <Nav />
+      <Nav
+        setSearch={setSearch}
+        setId={setId}
+        setSimilar={setSimilar}
+        setRecipe={setRecipe}
+      />
       <Display
         recipe={recipe}
         setRecipe={setRecipe}
@@ -37,6 +43,8 @@ const Main = () => {
         setId={setId}
         rname={rname}
         setRname={setRname}
+        similar={similar}
+        setSimilar={setSimilar}
       />
     </MainStyled>
   );
@@ -55,7 +63,7 @@ const MainStyled = styled(motion.div)`
   @media only screen and (max-width: 1079px) {
     display: none;
   }
-  background-color: rgba(0, 0, 0, 0.158);
+  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 35px;
