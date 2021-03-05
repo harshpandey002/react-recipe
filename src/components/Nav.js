@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { randomRecipe } from "../api";
 import Logo from "../img/Logo.svg";
 import axios from "axios";
+import ReactTooltip from "react-tooltip";
 
 const Nav = ({ setId, setSimilar, setRecipe }) => {
   const clickHandler = () => {
@@ -17,7 +18,15 @@ const Nav = ({ setId, setSimilar, setRecipe }) => {
   };
   return (
     <NavStyled>
-      <img onClick={clickHandler} src={Logo} alt="logo" />
+      <img
+        data-tip="React-tooltip"
+        onClick={clickHandler}
+        src={Logo}
+        alt="logo"
+      />
+      <ReactTooltip place="right" type="dark" effect="solid">
+        <span>Generate Recipes</span>
+      </ReactTooltip>
     </NavStyled>
   );
 };
@@ -35,6 +44,11 @@ const NavStyled = styled(motion.div)`
   img {
     cursor: pointer;
     width: 3.5rem;
+  }
+
+  span {
+    font-size: 0.8rem;
+    text-align: center;
   }
 `;
 

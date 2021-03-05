@@ -26,11 +26,16 @@ const SimilarRecipesStyled = styled(motion.div)`
   overflow: hidden;
   margin-top: 1.5rem;
   cursor: pointer;
-
+  transition: all 0.2s;
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  &:hover {
+    width: 80%;
+    height: 17vh;
+    border-bottom: 1px solid #929292;
   }
 `;
 

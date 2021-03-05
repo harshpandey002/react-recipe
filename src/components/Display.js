@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { randomRecipe, searchRecipe } from "../api";
 import Recipes from "./Recipes";
 import Recipe from "./Recipe";
-import ScrollTop from "./ScrollTop";
 
 const Display = ({ recipe, setRecipe, search, id, setId, rname, setRname }) => {
   useEffect(() => {

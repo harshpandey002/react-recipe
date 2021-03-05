@@ -14,8 +14,9 @@ const Recipes = ({ title, id, setId, setRname }) => {
           src={`https://spoonacular.com/recipeImages/${id}-312x231.jpg`}
           alt="food"
         />
+
         <div className="title">
-          <h4>{title.slice(0, 30)}</h4>
+          <h4>{title}</h4>
         </div>
       </div>
     </RecipesStyled>
@@ -29,6 +30,7 @@ const RecipesStyled = styled(motion.div)`
   overflow: hidden;
   margin-top: 1.5rem;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.158);
   .card {
     img {
       width: 100%;
@@ -39,6 +41,13 @@ const RecipesStyled = styled(motion.div)`
   .title {
     text-align: center;
     font-size: 1.1rem;
+  }
+  transition: all 0.3s;
+  &:hover {
+    width: 35%;
+    height: 28vh;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #929292;
   }
 `;
 
