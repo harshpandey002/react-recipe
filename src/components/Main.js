@@ -17,7 +17,7 @@ const Main = () => {
   const [similar, setSimilar] = useState([]);
   const [id, setId] = useState();
   return (
-    <MainStyled variants={popup} initial="hidden" animate="show">
+    <MainStyled>
       <ScrollTop id={id} />
       <Nav
         setSearch={setSearch}
