@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import Similar from "./Similar";
 import Search from "../img/Search.svg";
+import { slideright } from "./animation";
 
 const Tool = ({
   textInput,
@@ -27,7 +28,7 @@ const Tool = ({
   };
 
   return (
-    <ToolStyled>
+    <ToolStyled variants={slideright} initial="hidden" animate="show">
       <form className="search">
         <input value={textInput} onChange={inputHandler} type="text" />
         <button onClick={submitSearch}>

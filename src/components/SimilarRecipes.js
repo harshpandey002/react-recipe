@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { fadeIn } from "./animation";
+import { popup } from "./animation";
 
 const SimilarRecipes = ({ title, id, setId, setRname }) => {
   const clickHandler = () => {
@@ -8,7 +8,7 @@ const SimilarRecipes = ({ title, id, setId, setRname }) => {
     setRname(title);
   };
   return (
-    <SimilarRecipesStyled variants={fadeIn} initial="hidden" animate="show">
+    <SimilarRecipesStyled variants={popup} initial="hidden" animate="show">
       <img
         onClick={clickHandler}
         src={`https://spoonacular.com/recipeImages/${id}-312x150.jpg`}

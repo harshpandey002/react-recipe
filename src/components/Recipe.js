@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import axios from "axios";
 import { recipeDetail, recipeIngredient } from "../api";
-import { stretch } from "./animation";
+import { popup } from "./animation";
 
 const Recipe = ({ id, rname }) => {
   const [food, setFood] = useState([]);
@@ -25,11 +25,11 @@ const Recipe = ({ id, rname }) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [id]);
   return (
-    <RecipeStyled variants={stretch} initial="hidden" animate="show">
+    <RecipeStyled>
       <div className="header">
         <h1>{rname}</h1>
         <motion.img
-          variants={stretch}
+          variants={popup}
           initial="hidden"
           animate="show"
           src={`https://spoonacular.com/recipeImages/${id}-636x393.jpg`}

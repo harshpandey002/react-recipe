@@ -14,14 +14,14 @@ const Display = ({ recipe, setRecipe, search, id, setId, rname, setRname }) => {
         .then((data) => {
           setRecipe(data.data.recipes);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => console.log("Random Error"));
     } else {
       axios
         .get(searchRecipe(`${search}`))
         .then((data) => {
           setRecipe(data.data.results);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => console.log("Search Error"));
     }
   }, [search]);
 

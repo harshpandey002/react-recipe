@@ -8,7 +8,12 @@ const Recipes = ({ title, id, setId, setRname }) => {
     setRname(title);
   };
   return (
-    <RecipesStyled variants={fadeIn} initial="hidden" animate="show">
+    <RecipesStyled
+      variants={fadeIn}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <div className="card" onClick={clickHandler}>
         <img
           src={`https://spoonacular.com/recipeImages/${id}-312x231.jpg`}
@@ -47,7 +52,7 @@ const RecipesStyled = styled(motion.div)`
     width: 35%;
     height: 28vh;
     background-color: rgba(0, 0, 0, 0);
-    border-bottom: 1px solid #929292;
+    border-bottom: 1px solid #bbbbbb;
   }
 `;
 

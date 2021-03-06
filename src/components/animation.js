@@ -1,6 +1,19 @@
-import { useSpring } from "framer-motion";
-
 export const fadeIn = {
+  hidden: {
+    opacity: 0,
+    x: 900,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+      delay: 0.2,
+    },
+  },
+};
+
+export const popup = {
   hidden: {
     opacity: 0,
     scale: 0,
@@ -9,23 +22,7 @@ export const fadeIn = {
     opacity: 1,
     scale: 1,
     transition: {
-      type: "spring",
-      stiffness: 100,
-      duration: 2,
-    },
-  },
-};
-
-export const stretch = {
-  hidden: {
-    opacity: 0,
-  },
-  show: {
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      duration: 2,
+      duration: 0.5,
     },
     exit: {
       opacity: 0,
@@ -34,16 +31,27 @@ export const stretch = {
   },
 };
 
-export const popup = {
+export const slideright = {
   hidden: {
-    width: 0,
-    height: 200,
+    x: -900,
   },
   show: {
-    width: 1460,
-    height: 713,
+    x: 0,
     transition: {
       duration: 1,
+      delay: 0.2,
+    },
+  },
+};
+
+export const slidebottom = {
+  hidden: {
+    x: -70,
+  },
+  show: {
+    x: 0,
+    transition: {
+      duration: 0.3,
     },
   },
 };

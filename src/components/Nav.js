@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { randomRecipe } from "../api";
 import Logo from "../img/Logo.svg";
 import axios from "axios";
-import ReactTooltip from "react-tooltip";
+import { slidebottom } from "./animation";
 
 const Nav = ({ setId, setSimilar, setRecipe }) => {
   const clickHandler = () => {
@@ -17,16 +17,8 @@ const Nav = ({ setId, setSimilar, setRecipe }) => {
     setSimilar([]);
   };
   return (
-    <NavStyled>
-      <img
-        data-tip="React-tooltip"
-        onClick={clickHandler}
-        src={Logo}
-        alt="logo"
-      />
-      <ReactTooltip place="right" type="dark" effect="solid">
-        <span>Generate Recipes</span>
-      </ReactTooltip>
+    <NavStyled variants={slidebottom} initial="hidden" animate="show">
+      <img onClick={clickHandler} src={Logo} alt="logo" />
     </NavStyled>
   );
 };
@@ -37,13 +29,16 @@ const NavStyled = styled(motion.div)`
   align-items: center;
   flex: 1.5;
   padding: 1.3rem 0rem;
-
   background-color: rgba(0, 0, 0, 0.158);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   img {
     cursor: pointer;
     width: 3.5rem;
+    transition: width 0.2s;
+    &:hover {
+      width: 4.7rem;
+    }
   }
 
   span {

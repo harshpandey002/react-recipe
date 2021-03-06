@@ -7,7 +7,6 @@ import Tool from "./Tool";
 //Framer Motion
 import { motion } from "framer-motion";
 import ScrollTop from "./ScrollTop";
-import { popup } from "./animation";
 
 const Main = () => {
   const [textInput, setTextInput] = useState("");
