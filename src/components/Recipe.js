@@ -22,7 +22,6 @@ const Recipe = ({ id, rname }) => {
         setIngridient(data.data.ingredients);
       })
       .catch((err) => console.log("Ingridient API error"));
-    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [id]);
   return (
     <RecipeStyled>
