@@ -47,7 +47,14 @@ const Recipe = ({ id, rname }) => {
         <div className="ingredient">
           <h2>Ingredients:</h2>
           {ingridient.map((data) => (
-            <p>{`${data.name} (${data.amount.metric.value}${data.amount.metric.unit})`}</p>
+            <p
+              onClick={() =>
+                window.open(
+                  `https://spoonacular.com/cdn/ingredients_500x500/${data.image}`,
+                  "_blank"
+                )
+              }
+            >{`${data.name} (${data.amount.metric.value}${data.amount.metric.unit})`}</p>
           ))}
         </div>
       </div>
@@ -97,6 +104,7 @@ const RecipeStyled = styled(motion.div)`
       flex: 2;
       padding-right: 1rem;
       p {
+        cursor: pointer;
         font-size: 1.3rem;
         margin-bottom: 0.4rem;
       }

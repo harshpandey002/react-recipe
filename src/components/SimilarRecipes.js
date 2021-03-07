@@ -24,7 +24,7 @@ const SimilarRecipesStyled = styled(motion.div)`
   height: 15vh;
   border-radius: 25px;
   overflow: hidden;
-  margin-top: 1.5rem;
+  margin-bottom: 1.2rem;
   cursor: pointer;
   transition: all 0.2s;
   img {

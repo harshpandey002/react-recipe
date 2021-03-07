@@ -35,6 +35,7 @@ const Tool = ({
           <img type="submit" src={Search} alt="search" />
         </button>
       </form>
+      <p>Similar Recipes</p>
       <Similar
         id={id}
         setId={setId}
@@ -48,6 +49,22 @@ const Tool = ({
 };
 
 const ToolStyled = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 8;
+  align-self: center;
+  border-radius: 35px;
+  height: 83vh;
+  margin-right: 2.5rem;
+
+  background-color: rgba(0, 0, 0, 0.158);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  p {
+    font-size: 1.5rem;
+  }
   .search {
     display: flex;
     justify-content: center;
@@ -81,19 +98,6 @@ const ToolStyled = styled(motion.div)`
     border-radius: 35px;
     border: 1px solid rgba(119, 119, 119, 0.18);
   }
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  flex: 8;
-  align-self: center;
-  border-radius: 35px;
-  height: 80vh;
-  margin-right: 2.5rem;
-
-  background-color: rgba(0, 0, 0, 0.158);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 `;
 
 export default Tool;
