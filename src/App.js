@@ -8,8 +8,8 @@ function App() {
     <AppStyled>
       <GlobalStyle />
       <h3>
-        This Web Page is not support on Small Devices for now. Please switch to
-        a laptop to view this Application.
+        This Web Page is not supported on Small Devices for now. Please switch
+        to a laptop to view this Application.
       </h3>
       <Main />
     </AppStyled>
