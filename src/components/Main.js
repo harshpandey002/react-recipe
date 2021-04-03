@@ -6,7 +6,6 @@ import Nav from "./Nav";
 import Tool from "./Tool";
 //Framer Motion
 import { motion } from "framer-motion";
-import ScrollTop from "./ScrollTop";
 
 const Main = () => {
   const [textInput, setTextInput] = useState("");
@@ -17,7 +16,6 @@ const Main = () => {
   const [id, setId] = useState();
   return (
     <MainStyled>
-      <ScrollTop id={id} />
       <Nav
         setSearch={setSearch}
         setId={setId}

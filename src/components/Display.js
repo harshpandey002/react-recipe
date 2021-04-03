@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import styled from "styled-components";
@@ -25,11 +25,18 @@ const Display = ({ recipe, setRecipe, search, id, setId, rname, setRname }) => {
     }
   }, [search]);
 
+  const dtail = useRef(null);
+
+  const scrollfunc = () => {
+    dtail.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <DisplayStyled>
-      {id && <Recipe id={id} rname={rname} />}
+      {id && <Recipe ref={dtail} id={id} rname={rname} />}
       {recipe.map((data) => (
         <Recipes
+          onClick="scrollfunc"
           title={data.title}
           img={data.image}
           setId={setId}
