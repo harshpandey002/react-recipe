@@ -17,10 +17,26 @@ function App() {
         <svg
           onClick={() =>
             window.open(
+              "https://www.linkedin.com/in/harsh-kumar-pandey-5ab9071aa/",
+              "_blank"
+            )
+          }
+          id="linkedin"
+          viewBox="0 0 58 58"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M29 0.199982C13.094 0.199982 0.199982 13.094 0.199982 29C0.199982 44.906 13.094 57.8 29 57.8C44.906 57.8 57.8 44.906 57.8 29C57.8 13.094 44.906 0.199982 29 0.199982ZM21.95 40.937H16.118V22.169H21.95V40.937ZM18.998 19.865C17.156 19.865 15.965 18.56 15.965 16.946C15.965 15.299 17.192 14.033 19.073 14.033C20.954 14.033 22.106 15.299 22.142 16.946C22.142 18.56 20.954 19.865 18.998 19.865ZM43.25 40.937H37.418V30.536C37.418 28.115 36.572 26.471 34.463 26.471C32.852 26.471 31.895 27.584 31.472 28.655C31.316 29.036 31.277 29.576 31.277 30.113V40.934H25.442V28.154C25.442 25.811 25.367 23.852 25.289 22.166H30.356L30.623 24.773H30.74C31.508 23.549 33.389 21.743 36.536 21.743C40.373 21.743 43.25 24.314 43.25 29.84V40.937V40.937Z" />
+        </svg>
+
+        <svg
+          onClick={() =>
+            window.open(
               "https://github.com/harshpandey002/react-recipe",
               "_blank"
             )
           }
+          id="git"
           enable-background="new 0 0 24 24"
           viewBox="0 0 24 24"
           width="512"
@@ -48,16 +64,29 @@ const AppStyled = styled(motion.div)`
     }
   }
   .icons {
-    display: flex;
     position: absolute;
-    top: 2px;
-    right: 7.5%;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
     svg {
       cursor: pointer;
-      width: 2rem;
-      fill: #464646;
+      width: 2.2rem;
+      fill: rgba(0, 0, 0, 0.322);
+      margin-right: 2px;
+      margin-bottom: 0.5rem;
+      border-radius: 100%;
+    }
+    #git {
       &:hover {
-        fill: #ffffff;
+        fill: #000000;
+      }
+    }
+    #linkedin {
+      &:hover {
+        fill: #0066ff;
+        background-color: white;
       }
     }
   }
