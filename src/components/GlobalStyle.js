@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
 
 body{
-  background-image: linear-gradient(45deg, rgb(43, 33, 93),rgb(81, 240, 237));
+  background-color: #2a2a2a;
   color: #d1d1d1;
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
